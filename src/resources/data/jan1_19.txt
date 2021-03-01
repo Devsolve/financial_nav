@@ -1,0 +1,398 @@
+Scheme Code;Scheme Name;ISIN Div Payout/ISIN Growth;ISIN Div Reinvestment;Net Asset Value;Repurchase Price;Sale Price;Date
+
+Open Ended Schemes ( Equity Scheme - Large Cap Fund )
+
+
+Axis Mutual Fund
+120466;Axis Bluechip Fund - Direct Plan - Dividend;INF846K01DN3;INF846K01DO1;17.23;;;01-Jan-2019
+120465;Axis Bluechip Fund - Direct Plan - Growth;INF846K01DP8;;29.06;;;01-Jan-2019
+112278;Axis Bluechip Fund - Regular Plan - Dividend;INF846K01172;INF846K01180;15.87;;;01-Jan-2019
+112277;Axis Bluechip Fund - Regular Plan - Growth;INF846K01164;;27.09;;;01-Jan-2019
+
+Open Ended Schemes ( Equity Scheme - Large & Mid Cap Fund )
+
+
+Axis Mutual Fund
+145109;Axis Growth Opportunities Fund - Direct Plan - Dividend;INF846K01J53;INF846K01J61;10.26;;;01-Jan-2019
+145110;Axis Growth Opportunities Fund - Direct Plan - Growth;INF846K01J46;;10.26;;;01-Jan-2019
+145111;Axis Growth Opportunities Fund - Regular Plan - Dividend;INF846K01J87;INF846K01J95;10.22;;;01-Jan-2019
+145112;Axis Growth Opportunities Fund - Regular Plan - Growth;INF846K01J79;;10.22;;;01-Jan-2019
+
+Open Ended Schemes ( Equity Scheme - Mid Cap Fund )
+
+
+Axis Mutual Fund
+120504;Axis Midcap Fund - Direct Plan - Dividend;INF846K01EF7;INF846K01EG5;30.34;;;01-Jan-2019
+120505;Axis Midcap Fund - Direct Plan - Growth;INF846K01EH3;;38.21;;;01-Jan-2019
+114565;Axis Midcap Fund - Regular Plan - Dividend;INF846K01867;INF846K01875;25.22;;;01-Jan-2019
+114564;Axis Midcap Fund - Regular Plan - Growth;INF846K01859;;35.60;;;01-Jan-2019
+
+Open Ended Schemes ( Equity Scheme - Small Cap Fund )
+
+
+Axis Mutual Fund
+125351;Axis Small Cap Fund - Direct Plan - Dividend;INF846K01K43;INF846K01K50;23.60;;;01-Jan-2019
+125354;Axis Small Cap Fund - Direct Plan - Growth;INF846K01K35;;28.51;;;01-Jan-2019
+125352;Axis Small Cap Fund - Regular Plan - Dividend;INF846K01K19;INF846K01K27;22.17;;;01-Jan-2019
+125350;Axis Small Cap Fund - Regular Plan - Growth;INF846K01K01;;26.94;;;01-Jan-2019
+
+Open Ended Schemes ( Equity Scheme - Focused Fund )
+
+
+Axis Mutual Fund
+120467;Axis Focused 25 Fund - Direct Plan - Dividend Option;INF846K01CO3;INF846K01CP0;28.51;;;01-Jan-2019
+120468;Axis Focused 25 Fund - Direct Plan - Growth Option;INF846K01CQ8;;28.88;;;01-Jan-2019
+117559;Axis Focused 25 Fund - Regular Plan - Dividend Option;INF846K01CI5;INF846K01CJ3;18.73;;;01-Jan-2019
+117560;Axis Focused 25 Fund - Regular Plan - Growth Option;INF846K01CH7;;26.87;;;01-Jan-2019
+
+Open Ended Schemes ( Equity Scheme - ELSS )
+
+
+Axis Mutual Fund
+120502;Axis Long Term Equity Fund - Direct Plan - Dividend option;INF846K01EX0;INF846K01EY8;37.5635;;;01-Jan-2019
+120503;Axis Long Term Equity Fund - Direct Plan - Growth Option;INF846K01EW2;;46.0296;;;01-Jan-2019
+112322;Axis Long Term Equity Fund - Regular Plan - Dividend;INF846K01149;INF846K01156;22.4130;;;01-Jan-2019
+112323;Axis Long Term Equity Fund - Regular Plan - Growth;INF846K01131;;42.9711;;;01-Jan-2019
+
+Open Ended Schemes ( Debt Scheme - Liquid Fund )
+
+
+Axis Mutual Fund
+128954;Axis Liquid Fund - Direct plan - Bonus Option;INF846K01NH4;;2036.5187;;;01-Jan-2019
+120388;Axis Liquid Fund - Direct Plan - Daily Dividend Option;;INF846K01DA0;1000.9560;;;01-Jan-2019
+120389;Axis Liquid Fund - Direct Plan - Growth Option;INF846K01CX4;;2036.6332;;;01-Jan-2019
+120391;Axis Liquid Fund - Direct Plan - Monthly Dividend Option;INF846K01CY2;INF846K01CZ9;1001.5544;;;01-Jan-2019
+120390;Axis Liquid Fund - Direct Plan - Weekly Dividend Option;INF846K01DB8;INF846K01DC6;1002.3136;;;01-Jan-2019
+112211;Axis Liquid Fund - Regular Plan - Daily Dividend Option;;INF846K01420;1001.3998;;;01-Jan-2019
+112210;Axis Liquid Fund - Regular Plan - Growth Option;INF846K01412;;2028.6074;;;01-Jan-2019
+112213;Axis Liquid Fund - Regular Plan - Monthly Dividend Option;INF846K01453;INF846K01461;1002.1403;;;01-Jan-2019
+112212;Axis Liquid Fund - Regular Plan - Weekly Dividend Option;INF846K01438;INF846K01446;1002.3122;;;01-Jan-2019
+112712;Axis Liquid Fund - Retail Plan - Daily Dividend Option;;INF846K01362;1000.9559;;;01-Jan-2019
+112713;Axis Liquid Fund - Retail Plan - Growth Option;INF846K01354;;1917.7383;;;01-Jan-2019
+112714;Axis Liquid Fund - Retail Plan - Monthly Dividend Option;INF846K01396;INF846K01404;1001.4667;;;01-Jan-2019
+112715;Axis Liquid Fund - Retail Plan - Weekly Dividend Option;INF846K01370;INF846K01388;1000.8315;;;01-Jan-2019
+
+Open Ended Schemes ( Debt Scheme - Ultra Short Duration Fund )
+
+
+Axis Mutual Fund
+144753;Axis Ultra Short Term Fund - Direct Plan Daily Dividend Reinvestment;;INF846K01F57;10.0200;;;01-Jan-2019
+144754;Axis Ultra Short Term Fund - Direct Plan Growth;INF846K01F40;;10.2772;;;01-Jan-2019
+144755;Axis Ultra Short Term Fund - Direct Plan Monthly Dividend;INF846K01F99;INF846K01F81;10.0482;;;01-Jan-2019
+144756;Axis Ultra Short Term Fund - Direct Plan Regular Dividend;INF846K01G15;INF846K01G07;10.2776;;;01-Jan-2019
+144757;Axis Ultra Short Term Fund - Direct Plan Weekly Dividend;INF846K01F73;INF846K01F65;10.0531;;;01-Jan-2019
+144758;Axis Ultra Short Term Fund - Regular Plan Daily Dividend Reinvestment;;INF846K01G31;10.0200;;;01-Jan-2019
+144759;Axis Ultra Short Term Fund - Regular Plan Growth;INF846K01G23;;10.2519;;;01-Jan-2019
+144760;Axis Ultra Short Term Fund - Regular Plan Monthly Dividend;INF846K01G72;INF846K01G64;10.0407;;;01-Jan-2019
+144761;Axis Ultra Short Term Fund - Regular Plan Regular Dividend;INF846K01G98;INF846K01G80;10.2519;;;01-Jan-2019
+144762;Axis Ultra Short Term Fund - Regular Plan Weekly Dividend;INF846K01G56;INF846K01G49;10.0529;;;01-Jan-2019
+
+Open Ended Schemes ( Debt Scheme - Low Duration Fund )
+
+
+Axis Mutual Fund
+120515;Axis Treasury Advantage Fund - Direct Plan - Daily Dividend Option;;INF846K01EQ4;1007.2893;;;01-Jan-2019
+120513;Axis Treasury Advantage Fund - Direct Plan - Growth Option;INF846K01EN1;;2095.2088;;;01-Jan-2019
+120516;Axis Treasury Advantage Fund - Direct Plan - Monthly Dividend Option;INF846K01EO9;INF846K01EP6;1007.1248;;;01-Jan-2019
+120514;Axis Treasury Advantage Fund - Direct Plan - Weekly Dividend Option;INF846K01ER2;INF846K01ES0;1004.8653;;;01-Jan-2019
+112216;Axis Treasury Advantage Fund - Institutional Plan - Weekly Dividend Option;INF846K01552;INF846K01560;1006.2537;;;01-Jan-2019
+112215;Axis Treasury Advantage Fund - Regular Plan - Daily Dividend Option;;INF846K01545;1006.2334;;;01-Jan-2019
+112214;Axis Treasury Advantage Fund - Regular Plan - Growth Option;INF846K01537;;2040.3297;;;01-Jan-2019
+112217;Axis Treasury Advantage Fund - Regular Plan - Monthly Dividend Option;INF846K01578;INF846K01586;1007.0473;;;01-Jan-2019
+112720;Axis Treasury Advantage Fund - Retail Plan - Daily Dividend Option;;INF846K01487;1005.4758;;;01-Jan-2019
+112717;Axis Treasury Advantage Fund - Retail Plan - Growth Option;INF846K01479;;1909.3560;;;01-Jan-2019
+112718;Axis Treasury Advantage Fund - Retail Plan - Monthly Dividend Option;INF846K01511;INF846K01529;1007.0441;;;01-Jan-2019
+112719;Axis Treasury Advantage Fund - Retail Plan - Weekly Dividend Option;INF846K01495;INF846K01503;1004.8531;;;01-Jan-2019
+
+Open Ended Schemes ( Debt Scheme - Short Duration Fund )
+
+
+Axis Mutual Fund
+120510;Axis Short Term Fund - Direct Plan - Growth Option;INF846K01EI1;;20.6631;;;01-Jan-2019
+120511;Axis Short Term Fund - Direct Plan - Monthly Dividend Option;INF846K01EJ9;INF846K01EK7;10.0330;;;01-Jan-2019
+133894;Axis Short Term Fund - Direct Plan - Regular Dividend Option;INF846K01RH5;INF846K01RI3;12.5908;;;01-Jan-2019
+120512;Axis Short Term Fund - Direct Plan - Weekly Dividend Option;INF846K01EL5;INF846K01EM3;10.2443;;;01-Jan-2019
+128950;Axis Short Term Fund - Regular Plan - Bonus Option;INF846K01NS1;;19.8373;;;01-Jan-2019
+112354;Axis Short Term Fund - Regular Plan - Growth Option;INF846K01644;;19.7244;;;01-Jan-2019
+112355;Axis Short Term Fund - Regular Plan - Monthly Dividend Option;INF846K01651;INF846K01669;10.1655;;;01-Jan-2019
+133895;Axis Short Term Fund - Regular Plan - Regular Dividend Option;INF846K01RJ1;INF846K01RK9;13.1952;;;01-Jan-2019
+112369;Axis Short Term Fund - Regular Plan - Weekly Dividend Option;INF846K01677;INF846K01685;10.2443;;;01-Jan-2019
+112721;Axis Short Term Fund - Retail Plan - Growth Option;INF846K01594;;19.5019;;;01-Jan-2019
+112723;Axis Short Term Fund - Retail Plan - Monthly Dividend Option;INF846K01602;INF846K01610;10.0306;;;01-Jan-2019
+112722;Axis Short Term Fund - Retail Plan - Weekly Dividend Option;INF846K01628;INF846K01636;10.1527;;;01-Jan-2019
+
+Open Ended Schemes ( Debt Scheme - Medium Duration Fund )
+
+
+Axis Mutual Fund
+120475;Axis Strategic Bond Fund - Direct Plan - Growth Option;INF846K01DT0;;18.6525;;;01-Jan-2019
+120474;Axis Strategic Bond Fund - Direct Plan - Half Yearly Dividend option;INF846K01DU8;INF846K01DV6;11.0563;;;01-Jan-2019
+120476;Axis Strategic Bond Fund - Direct Plan - Quarterly Dividend option;INF846K01DW4;INF846K01DX2;10.7314;;;01-Jan-2019
+116894;Axis Strategic Bond Fund - Regular Plan - Growth Option;INF846K01BP2;;17.7406;;;01-Jan-2019
+116896;Axis Strategic Bond Fund - Regular Plan - Half Yearly Dividend Option;INF846K01BR8;INF846K01BT4;10.6945;;;01-Jan-2019
+116895;Axis Strategic Bond Fund - Regular Plan - Quarterly Dividend Option;INF846K01BQ0;INF846K01BS6;10.1729;;;01-Jan-2019
+
+Open Ended Schemes ( Debt Scheme - Dynamic Bond )
+
+
+Axis Mutual Fund
+115131;Axis Dynamic Bond Fund  - Regular Plan - Half Yearly Dividend option;INF846K01941;INF846K01958;10.6981;;;01-Jan-2019
+120451;Axis Dynamic Bond Fund - Direct Plan - Growth Option;INF846K01DI3;;19.7272;;;01-Jan-2019
+120450;Axis Dynamic Bond Fund - Direct Plan - Half Yearly Dividend Option;INF846K01DJ1;INF846K01DK9;11.5117;;;01-Jan-2019
+120452;Axis Dynamic Bond Fund - Direct Plan - Quarterly Dividend Option;INF846K01DL7;INF846K01DM5;10.5542;;;01-Jan-2019
+115068;Axis Dynamic Bond Fund - Regular Plan - Growth Option;INF846K01917;;18.4667;;;01-Jan-2019
+115069;Axis Dynamic Bond Fund - Regular Plan - Quarterly Dividend option;INF846K01925;INF846K01933;10.2755;;;01-Jan-2019
+
+Open Ended Schemes ( Debt Scheme - Corporate Bond Fund )
+
+
+Axis Mutual Fund
+141586;Axis Corporate Debt Fund - Direct Plan Daily Dividend Reinvestment;INF846K01ZN6;;10.0783;;;01-Jan-2019
+141588;Axis Corporate Debt Fund - Direct Plan Growth;INF846K01ZM8;;11.2450;;;01-Jan-2019
+141590;Axis Corporate Debt Fund - Direct Plan Monthly Dividend;INF846K01ZQ9;INF846K01ZR7;10.0600;;;01-Jan-2019
+141591;Axis Corporate Debt Fund - Direct Plan Regular Dividend;INF846K01ZS5;INF846K01ZT3;11.2423;;;01-Jan-2019
+141587;Axis Corporate Debt Fund - Direct Plan Weekly Dividend;INF846K01ZO4;INF846K01ZP1;10.0490;;;01-Jan-2019
+141589;Axis Corporate Debt Fund - Regular Plan Daily Dividend Reinvestment;INF846K01ZV9;;10.0715;;;01-Jan-2019
+141593;Axis Corporate Debt Fund - Regular Plan Growth;INF846K01ZU1;;11.1019;;;01-Jan-2019
+141594;Axis Corporate Debt Fund - Regular Plan Monthly Dividend;INF846K01ZY3;INF846K01ZZ0;10.0587;;;01-Jan-2019
+141595;Axis Corporate Debt Fund - Regular Plan Regular Dividend;INF846K01A03;INF846K01A11;11.1025;;;01-Jan-2019
+141592;Axis Corporate Debt Fund - Regular Plan Weekly Dividend;INF846K01ZW7;INF846K01ZX5;10.0488;;;01-Jan-2019
+
+Open Ended Schemes ( Debt Scheme - Credit Risk Fund )
+
+
+Axis Mutual Fund
+130314;Axis Credit Risk Fund - Direct Plan - Growth;INF846K01PJ5;;14.9687;;;01-Jan-2019
+130312;Axis Credit Risk Fund - Direct Plan - Monthly Dividend;INF846K01PM9;INF846K01PN7;10.0530;;;01-Jan-2019
+130311;Axis Credit Risk Fund - Direct Plan - Weekly Dividend;INF846K01PK3;INF846K01PL1;10.2470;;;01-Jan-2019
+130309;Axis Credit Risk Fund - Regular Plan - Growth;INF846K01PO5;;14.2223;;;01-Jan-2019
+130313;Axis Credit Risk Fund - Regular Plan - Monthly Dividend;INF846K01PR8;INF846K01PS6;10.1074;;;01-Jan-2019
+130310;Axis Credit Risk Fund - Regular Plan - weekly Dividend;INF846K01PP2;INF846K01PQ0;10.1665;;;01-Jan-2019
+
+Open Ended Schemes ( Debt Scheme - Banking and PSU Fund )
+
+
+Axis Mutual Fund
+120437;Axis Banking & PSU Debt Fund - Direct Plan - Daily Dividend Option;;INF846K01CU0;1008.4958;;;01-Jan-2019
+120438;Axis Banking & PSU Debt Fund - Direct Plan - Growth Option;INF846K01CR6;;1712.9116;;;01-Jan-2019
+120439;Axis Banking & PSU Debt Fund - Direct Plan - Monthly Dividend Option;INF846K01CT2;INF846K01CS4;1009.5935;;;01-Jan-2019
+120436;Axis Banking & PSU Debt Fund - Direct Plan - Weekly Dividend Option;INF846K01CV8;INF846K01CW6;1007.5744;;;01-Jan-2019
+117447;Axis Banking & PSU Debt Fund - Regular Plan - Daily Dividend Option;;INF846K01CC8;1008.4891;;;01-Jan-2019
+117446;Axis Banking & PSU Debt Fund - Regular Plan - Growth option;INF846K01CB0;;1692.7275;;;01-Jan-2019
+117449;Axis Banking & PSU Debt Fund - Regular Plan - Monthly Dividend Option;INF846K01CF1;INF846K01CG9;1009.5500;;;01-Jan-2019
+117448;Axis Banking & PSU Debt Fund - Regular Plan - Weekly Dividend option;INF846K01CD6;INF846K01CE4;1007.5667;;;01-Jan-2019
+
+Open Ended Schemes ( Debt Scheme - Gilt Fund )
+
+
+Axis Mutual Fund
+120447;Axis Gilt Fund - Direct Plan - Growth Option;INF846K01DD4;;16.1750;;;01-Jan-2019
+120448;Axis Gilt Fund - Direct Plan - Half Yearly Dividend Option;INF846K01DF9;INF846K01DE2;10.7469;;;01-Jan-2019
+120449;Axis Gilt Fund - Direct Plan - Regular Dividend Option;INF846K01DG7;INF846K01DH5;10.1229;;;01-Jan-2019
+116471;Axis Gilt Fund - Regular Plan - Growth Option;INF846K01AX8;;15.6805;;;01-Jan-2019
+116472;Axis Gilt Fund - Regular Plan - Half Yearly Dividend Option;INF846K01AZ3;INF846K01BB2;10.7308;;;01-Jan-2019
+116470;Axis Gilt Fund - Regular Plan - Regular Dividend Option;INF846K01CK1;INF846K01CL9;10.1215;;;01-Jan-2019
+
+Open Ended Schemes ( Hybrid Scheme - Conservative Hybrid Fund )
+
+
+Axis Mutual Fund
+120478;Axis Regular Saver Fund - Direct Plan - Half Yearly;INF846K01EB6;INF846K01EC4;11.6195;;;01-Jan-2019
+120479;Axis Regular Saver Fund - Direct Plan - Quarterly;INF846K01ED2;INF846K01EE0;13.3076;;;01-Jan-2019
+112927;Axis Regular Saver Fund - Regular Plan - Dividend Option - Annual Dividend Option;INF846K01743;INF846K01750;11.8651;;;01-Jan-2019
+112926;Axis Regular Saver Fund - Regular Plan - Dividend Option - Half Yearly;INF846K01727;INF846K01735;10.8421;;;01-Jan-2019
+112925;Axis Regular Saver Fund - Regular Plan - Dividend Option - Quarterly;INF846K01701;INF846K01719;10.5671;;;01-Jan-2019
+112924;Axis Regular Saver Fund - Regular Plan - Growth Option;INF846K01693;;19.0942;;;01-Jan-2019
+120477;Axis Regular Saver Fund- Direct Plan - Dividend Option - Annual Dividend Option;INF846K01DY0;INF846K01DZ7;12.6411;;;01-Jan-2019
+120480;Axis Regular Saver Fund- Direct Plan - Growth Option;INF846K01EA8;;20.6719;;;01-Jan-2019
+
+Open Ended Schemes ( Hybrid Scheme - Aggressive Hybrid Fund )
+
+
+Axis Mutual Fund
+144394;Axis Equity Hybrid Fund - Direct Plan - Growth Option;INF846K01E25;;9.92;;;01-Jan-2019
+144397;Axis Equity Hybrid Fund - Direct Plan - Monthly Dividend Option;INF846K01E33;INF846K01E41;9.93;;;01-Jan-2019
+144398;Axis Equity Hybrid Fund - Direct Plan - Quarterly Dividend Option;INF846K01E58;INF846K01E66;9.92;;;01-Jan-2019
+144395;Axis Equity Hybrid Fund - Direct Plan - Regular Dividend Option;INF846K01E09;INF846K01E17;9.92;;;01-Jan-2019
+144393;Axis Equity Hybrid Fund - Regular Plan - Growth Option;INF846K01E90;;9.85;;;01-Jan-2019
+144399;Axis Equity Hybrid Fund - Regular Plan - Monthly Dividend Option;INF846K01F08;INF846K01F16;9.85;;;01-Jan-2019
+144400;Axis Equity Hybrid Fund - Regular Plan - Quarterly Dividend Option;INF846K01F24;INF846K01F32;9.85;;;01-Jan-2019
+144396;Axis Equity Hybrid Fund - Regular Plan - Regular Dividend Option;INF846K01E74;INF846K01E82;9.85;;;01-Jan-2019
+
+Open Ended Schemes ( Hybrid Scheme - Dynamic Asset Allocation or Balanced Advantage )
+
+
+Axis Mutual Fund
+141643;Axis Dynamic Equity Fund - Direct Plan - Dividend;INF846K01A37;INF846K01A45;10.97;;;01-Jan-2019
+141642;Axis Dynamic Equity Fund - Direct Plan - Growth;INF846K01A29;;10.97;;;01-Jan-2019
+141645;Axis Dynamic Equity Fund - Regular Plan - Dividend;INF846K01A60;INF846K01A78;10.71;;;01-Jan-2019
+141644;Axis Dynamic Equity Fund - Regular Plan - Growth;INF846K01A52;;10.71;;;01-Jan-2019
+
+Open Ended Schemes ( Hybrid Scheme - Multi Asset Allocation )
+
+
+Axis Mutual Fund
+120523;Axis Triple Advantage Fund - Direct Plan - Dividend Option;INF846K01ET8;INF846K01EU6;17.1229;;;01-Jan-2019
+120524;Axis Triple Advantage Fund - Direct Plan - Growth Option;INF846K01EV4;;19.8932;;;01-Jan-2019
+113065;Axis Triple Advantage Fund - Regular Plan - Dividend Option;INF846K01776;INF846K01784;15.2234;;;01-Jan-2019
+113064;Axis Triple Advantage Fund - Regular Plan - Growth Option;INF846K01768;;18.6650;;;01-Jan-2019
+
+Open Ended Schemes ( Hybrid Scheme - Arbitrage Fund )
+
+
+Axis Mutual Fund
+130774;Axis Arbitrage Fund - Direct Plan - Dividend;INF846K01QA2;INF846K01QB0;11.0149;;;01-Jan-2019
+130773;Axis Arbitrage Fund - Direct Plan - Growth;INF846K01PZ1;;13.6736;;;01-Jan-2019
+130776;Axis Arbitrage Fund - Regular Plan - Dividend;INF846K01QD6;INF846K01QE4;10.4825;;;01-Jan-2019
+130771;Axis Arbitrage Fund - Regular Plan - Growth;INF846K01QC8;;13.1853;;;01-Jan-2019
+
+Open Ended Schemes ( Hybrid Scheme - Equity Savings )
+
+
+Axis Mutual Fund
+135120;Axis Equity Saver Fund - Direct Plan - Growth;INF846K01VJ3;;12.93;;;01-Jan-2019
+135121;Axis Equity Saver Fund - Direct Plan - Monthly Dividend;INF846K01VK1;INF846K01VL9;11.01;;;01-Jan-2019
+135124;Axis Equity Saver Fund - Direct Plan - Quarterly Dividend;INF846K01VM7;INF846K01VN5;11.05;;;01-Jan-2019
+139520;Axis Equity Saver Fund - Direct Plan - Regular Dividend;INF846K01XP6;INF846K01XQ4;12.01;;;01-Jan-2019
+135122;Axis Equity Saver Fund - Regular Plan - Growth;INF846K01VO3;;12.42;;;01-Jan-2019
+135123;Axis Equity Saver Fund - Regular Plan - Monthly Dividend;INF846K01VP0;INF846K01VQ8;10.59;;;01-Jan-2019
+135125;Axis Equity Saver Fund - Regular Plan - Quarterly Dividend;INF846K01VR6;INF846K01VS4;10.61;;;01-Jan-2019
+139521;Axis Equity Saver Fund - Regular Plan - Regular Dividend;INF846K01XR2;INF846K01XS0;12.06;;;01-Jan-2019
+
+Open Ended Schemes ( Solution Oriented Scheme - Childrenâ€™s Fund )
+
+
+Axis Mutual Fund
+135765;Axis Children's Gift Fund - Lock in - Direct Dividend;INF846K01WP8;;13.3471;;;01-Jan-2019
+135762;Axis Children's Gift Fund - Lock in - Direct Growth;INF846K01WO1;;13.3544;;;01-Jan-2019
+135760;Axis Children's Gift Fund - Lock in - Regular Dividend;INF846K01WK9;;12.7170;;;01-Jan-2019
+135759;Axis Children's Gift Fund - Lock in - Regular Growth;INF846K01WJ1;;12.7103;;;01-Jan-2019
+135763;Axis Children's Gift Fund - No Lock in - Direct Dividend;INF846K01WS2;INF846K01WQ6;13.3471;;;01-Jan-2019
+135764;Axis Children's Gift Fund - No Lock in - Direct Growth;INF846K01WR4;;13.4634;;;01-Jan-2019
+135761;Axis Children's Gift Fund - No Lock in - Regular Plan - Dividend;INF846K01WN3;INF846K01WL7;12.7142;;;01-Jan-2019
+135766;Axis Children's Gift Fund - No Lock in - Regular Plan - Growth;INF846K01WM5;;12.7090;;;01-Jan-2019
+
+Open Ended Schemes ( Other Scheme - Gold ETF )
+
+
+Axis Mutual Fund
+113434;Axis Gold ETF;INF846K01W80;;2797.1967;;;01-Jan-2019
+
+Open Ended Schemes ( Other Scheme - Other  ETFs )
+
+
+Axis Mutual Fund
+141545;Axis Nifty ETF;INF846K01W98;;1111.1557;;;01-Jan-2019
+
+Open Ended Schemes ( Other Scheme - FoF Domestic )
+
+
+Axis Mutual Fund
+120472;Axis Gold Fund - Direct Plan - Dividend option;INF846K01DQ6;INF846K01DR4;10.5944;;;01-Jan-2019
+120473;Axis Gold Fund - Direct Plan - Growth option;INF846K01DS2;;10.5841;;;01-Jan-2019
+115898;Axis Gold Fund - Regular Plan - Dividend Option;INF846K01AM1;INF846K01AN9;9.8929;;;01-Jan-2019
+115897;Axis Gold Fund - Regular Plan - Growth Option;INF846K01AL3;;9.8804;;;01-Jan-2019
+
+Open Ended Schemes ( Equity Scheme - Flexi Cap Fund )
+
+
+Axis Mutual Fund
+141926;Axis Multicap Fund - Direct Plan - Dividend;INF846K01B02;INF846K01B10;11.10;;;01-Jan-2019
+141925;Axis Multicap Fund - Direct Plan - Growth;INF846K01B28;;11.10;;;01-Jan-2019
+141928;Axis Multicap Fund - Regular Plan - Dividend;INF846K01B36;INF846K01B44;10.90;;;01-Jan-2019
+141927;Axis Multicap Fund - Regular Plan - Growth;INF846K01B51;;10.90;;;01-Jan-2019
+
+Close Ended Schemes ( Income )
+
+
+Axis Mutual Fund
+117980;Axis Capital Protection Oriented Fund - Series 5 - Dividend option;INF846K01XO9;;15.6948;;;01-Jan-2019
+117979;Axis Capital Protection Oriented Fund - Series 5 - Growth Option;INF846K01XN1;;15.6949;;;01-Jan-2019
+129383;Axis Fixed Term Plan - Series 64 - Direct plan - Growth;INF846K01XM3;;14.6092;;;01-Jan-2019
+129386;Axis Fixed Term Plan - Series 64 - Regular plan -  Dividend;INF846K01XH3;;14.2572;;;01-Jan-2019
+129381;Axis Fixed Term Plan - Series 64 - Regular Plan - Growth;INF846K01XJ9;;14.2573;;;01-Jan-2019
+144016;Axis Fixed Term Plan - Series 95 (1185 Days) - Direct Plan - Growth Option;INF846K01D26;;10.4115;;;01-Jan-2019
+144045;Axis Fixed Term Plan - Series 95 (1185 Days) - Direct Plan - Quarterly Dividend Option;INF846K01D83;;10.4114;;;01-Jan-2019
+144013;Axis Fixed Term Plan - Series 95 (1185 Days) - Regular Plan - Growth Option;INF846K01D59;;10.3925;;;01-Jan-2019
+144043;Axis Fixed Term Plan - Series 95 (1185 Days) - Regular Plan - Half Yearly Dividend Option;INF846K01D75;;10.3925;;;01-Jan-2019
+144046;Axis Fixed Term Plan - Series 95 (1185 Days) - Regular Plan - Quarterly Dividend Option;INF846K01D91;;10.3924;;;01-Jan-2019
+144015;Axis Fixed Term Plan - Series 95 (1185 Days) - Regular Plan - Regular Dividend Option;INF846K01D67;;10.3940;;;01-Jan-2019
+144826;Axis Fixed Term Plan - Series 96 (1124 Days) - Direct Plan - Growth Option;INF846K01H06;;10.1695;;;01-Jan-2019
+144830;Axis Fixed Term Plan - Series 96 (1124 Days) - Regular Plan - Growth Option;INF846K01H30;;10.1606;;;01-Jan-2019
+144831;Axis Fixed Term Plan - Series 96 (1124 Days) - Regular Plan - Half Yearly Dividend Option;INF846K01H55;;10.1607;;;01-Jan-2019
+144832;Axis Fixed Term Plan - Series 96 (1124 Days) - Regular Plan - Quarterly Dividend Option;INF846K01H71;;10.1616;;;01-Jan-2019
+144833;Axis Fixed Term Plan - Series 96 (1124 Days) - Regular Plan - Regular Dividend Option;INF846K01H48;;10.1606;;;01-Jan-2019
+144868;Axis Fixed Term Plan - Series 97 (1116 Days) - Direct Plan - Growth Option;INF846K01H89;;10.2052;;;01-Jan-2019
+144869;Axis Fixed Term Plan - Series 97 (1116 Days) - Direct Plan - Half Yearly Dividend Option;INF846K01I05;;10.2056;;;01-Jan-2019
+144874;Axis Fixed Term Plan - Series 97 (1116 Days) - Regular Plan - Growth Option;INF846K01I13;;10.1997;;;01-Jan-2019
+144872;Axis Fixed Term Plan - Series 97 (1116 Days) - Regular Plan - Half Yearly Dividend Option;INF846K01I39;;10.1997;;;01-Jan-2019
+144875;Axis Fixed Term Plan - Series 97 (1116 Days) - Regular Plan - Regular Dividend Option;INF846K01I21;;10.2010;;;01-Jan-2019
+135235;Axis Hybrid Fund - Series 25 - Direct Plan - Dividend;INF846K01VU0;;12.5145;;;01-Jan-2019
+135233;Axis Hybrid Fund - Series 25 - Direct Plan - Growth;INF846K01VT2;;12.5144;;;01-Jan-2019
+135234;Axis Hybrid Fund - Series 25 - Regular Plan - Dividend;INF846K01VW6;;11.9822;;;01-Jan-2019
+135232;Axis Hybrid Fund - Series 25 - Regular Plan - Growth;INF846K01VV8;;11.9822;;;01-Jan-2019
+135284;Axis Hybrid Fund - Series 26 - Direct Plan - Dividend;INF846K01VY2;;12.6180;;;01-Jan-2019
+135282;Axis Hybrid Fund - Series 26 - Direct Plan - Growth;INF846K01VX4;;12.6175;;;01-Jan-2019
+135283;Axis Hybrid Fund - Series 26 - Regular Plan - Dividend;INF846K01WA0;;12.0872;;;01-Jan-2019
+135285;Axis Hybrid Fund - Series 26 - Regular Plan - Growth;INF846K01VZ9;;12.0872;;;01-Jan-2019
+135529;Axis Hybrid Fund - Series 27 - Direct Plan - Dividend;INF846K01WC6;;12.5334;;;01-Jan-2019
+135528;Axis Hybrid Fund - Series 27 - Direct Plan - Growth;INF846K01WB8;;12.5300;;;01-Jan-2019
+135526;Axis Hybrid Fund - Series 27 - Regular Plan - Dividend;INF846K01WE2;;12.0215;;;01-Jan-2019
+135527;Axis Hybrid Fund - Series 27 - Regular Plan - Growth;INF846K01WD4;;12.0215;;;01-Jan-2019
+135619;Axis Hybrid Fund - Series 28 - Direct Plan - Dividend;INF846K01WG7;;12.8693;;;01-Jan-2019
+135618;Axis Hybrid Fund - Series 28 - Direct Plan - Growth;INF846K01WF9;;12.8693;;;01-Jan-2019
+135621;Axis Hybrid Fund - Series 28 - Regular Plan - Dividend;INF846K01WI3;;12.3540;;;01-Jan-2019
+135620;Axis Hybrid Fund - Series 28 - Regular Plan - Growth;INF846K01WH5;;12.3540;;;01-Jan-2019
+136033;Axis Hybrid Fund Series - 29 (1275 Days) Direct Growth;INF846K01WT0;;13.3314;;;01-Jan-2019
+136035;Axis Hybrid Fund Series - 29 (1275 Days) Dividend;INF846K01WW4;;12.8264;;;01-Jan-2019
+136032;Axis Hybrid Fund Series - 29 (1275 Days) Growth;INF846K01WV6;;12.8264;;;01-Jan-2019
+136131;Axis Hybrid Fund Series-30 (1297 Days) Direct Growth;INF846K01WX2;;13.8487;;;01-Jan-2019
+136132;Axis Hybrid Fund Series-30 (1297 Days) Dividend;INF846K01XA8;;13.3287;;;01-Jan-2019
+136130;Axis Hybrid Fund Series-30 (1297 Days) Growth;INF846K01WZ7;;13.3287;;;01-Jan-2019
+139522;Axis Hybrid Fund Series - 31 (1381) Direct Dividend;INF846K01XU6;;12.0866;;;01-Jan-2019
+139524;Axis Hybrid Fund Series - 31 (1381) Direct Growth;INF846K01XT8;;12.0862;;;01-Jan-2019
+139523;Axis Hybrid Fund Series - 31 (1381) Dividend;INF846K01XW2;;11.6278;;;01-Jan-2019
+139525;Axis Hybrid Fund Series - 31 (1381) Growth;INF846K01XV4;;11.6278;;;01-Jan-2019
+139612;Axis Hybrid Fund Series - 32 (1367 Days) Direct Dividend;INF846K01XY8;;11.9461;;;01-Jan-2019
+139613;Axis Hybrid Fund Series - 32 (1367 Days) Direct Growth;INF846K01XX0;;11.9461;;;01-Jan-2019
+139614;Axis Hybrid Fund Series - 32 (1367 Days) Dividend;INF846K01YA6;;11.5639;;;01-Jan-2019
+139615;Axis Hybrid Fund Series - 32 (1367 Days) Growth;INF846K01XZ5;;11.5639;;;01-Jan-2019
+139778;Axis Hybrid Fund Series - 33 (1358 Days) - Direct Divided;INF846K01YC2;;11.7158;;;01-Jan-2019
+139775;Axis Hybrid fund Series - 33 (1358 Days) - Direct Growth;INF846K01YB4;;11.7158;;;01-Jan-2019
+139776;Axis Hybrid Fund Series - 33 (1358 Days) - Dividend;INF846K01YE8;;11.2975;;;01-Jan-2019
+139777;Axis Hybrid Fund Series - 33 (1358 Days) - Growth;INF846K01YD0;;11.2974;;;01-Jan-2019
+140112;Axis Hybrid Fund - Series 35 (1359 Days) - Direct Plan - Growth Option;INF846K01YF5;;12.2655;;;01-Jan-2019
+140115;Axis Hybrid Fund - Series 35 (1359 Days) - Regular Plan - Dividend Option;INF846K01YI9;;11.8758;;;01-Jan-2019
+140114;Axis Hybrid Fund - Series 35 (1359 Days)- Regular Plan Growth Option;INF846K01YH1;;11.8762;;;01-Jan-2019
+122951;Axis Hybrid Fund - Series 5 (1346 Days) - Direct Plan - Growth;INF846K01YW0;;13.7917;;;01-Jan-2019
+122953;Axis Hybrid Fund - Series 5 (1346 Days) - Regular Plan - Dividend;INF846K01YT6;;13.0752;;;01-Jan-2019
+122950;Axis Hybrid Fund - Series 5 (1346 Days) - Regular Plan - Growth;INF846K01YU4;;13.0773;;;01-Jan-2019
+123065;Axis Hybrid Fund Series 6 (1324 Days) - Direct - Growth;INF846K01ZE5;;14.2199;;;01-Jan-2019
+123064;Axis Hybrid Fund Series 6 (1324 Days) - Regular - Dividend;INF846K01ZB1;;13.4910;;;01-Jan-2019
+123063;Axis Hybrid Fund Series 6 (1324 Days) - Regular - Growth;INF846K01ZC9;;13.4865;;;01-Jan-2019
+123978;Axis Hybrid Fund - Series 7 (1305 Days) - Regular Plan - Growth;INF846K01ZG0;;13.4885;;;01-Jan-2019
+
+Close Ended Schemes ( Growth )
+
+
+Axis Mutual Fund
+142492;Axis Capital Builder Fund - Series 1 (1540 Days) - Direct Plan - Dividend option;INF846K01B77;;10.06;;;01-Jan-2019
+142490;Axis Capital Builder Fund - Series 1 (1540 Days) - Direct Plan - Growth option;INF846K01B69;;10.06;;;01-Jan-2019
+142491;Axis Capital Builder Fund - Series 1 (1540 Days) - Regular Plan - Dividend option;INF846K01B93;;9.94;;;01-Jan-2019
+142489;Axis Capital Builder Fund - Series 1 (1540 Days) - Regular Plan - Growth option;INF846K01B85;;9.94;;;01-Jan-2019
+145671;Axis Capital Builder Fund - Series 4 (1582 Days) - Direct Plan - Dividend Option;INF846K01K76;;10.03;;;01-Jan-2019
+145672;Axis Capital Builder Fund - Series 4 (1582 Days) - Direct Plan - Growth Option;INF846K01K68;;10.03;;;01-Jan-2019
+145674;Axis Capital Builder Fund - Series 4 (1582 Days) - Regular Plan - Dividend Option;INF846K01K92;;10.02;;;01-Jan-2019
+145673;Axis Capital Builder Fund - Series 4 (1582 Days) - Regular Plan - Growth Option;INF846K01K84;;10.02;;;01-Jan-2019
+140397;Axis Emerging Opportunities Fund - Series 1 (1400 Days) - Direct Plan - Dividend Option;INF846K01YK5;;11.47;;;01-Jan-2019
+140398;Axis Emerging Opportunities Fund - Series 1 (1400 Days) - Direct Plan - Growth Option;INF846K01YJ7;;12.47;;;01-Jan-2019
+140399;Axis Emerging Opportunities Fund - Series 1 (1400 Days) - Regular Plan - Dividend Option;INF846K01YM1;;11.10;;;01-Jan-2019
+140400;Axis Emerging Opportunities Fund - Series 1 (1400 Days) - Regular Plan - Growth Option;INF846K01YL3;;12.09;;;01-Jan-2019
+140591;Axis Emerging Opportunities Fund - Series 2 (1400 Days) - Direct Plan - Dividend Option;INF846K01YY6;;12.06;;;01-Jan-2019
+140594;Axis Emerging Opportunities Fund - Series 2 (1400 Days) - Direct Plan - Growth Option;INF846K01YX8;;12.06;;;01-Jan-2019
+140593;Axis Emerging Opportunities Fund - Series 2 (1400 Days) - Regular Plan - Dividend Option;INF846K01ZA3;;11.72;;;01-Jan-2019
+140592;Axis Emerging Opportunities Fund - Series 2 (1400 Days) - Regular Plan - Growth Option;INF846K01YZ3;;11.72;;;01-Jan-2019
+141369;Axis Equity Advantage Fund - Series 1 - Direct Plan - Growth Option;INF846K01ZJ4;;11.54;;;01-Jan-2019
+141370;Axis Equity Advantage Fund - Series 1 - Regular Plan - Growth Option;INF846K01ZK2;;11.24;;;01-Jan-2019
+141666;Axis Equity Advantage Fund - Series 2 - Direct Plan - Growth Option;INF846K01A86;;11.06;;;01-Jan-2019
+141667;Axis Equity Advantage Fund - Series 2 - Regular Plan - Growth Option;INF846K01A94;;10.77;;;01-Jan-2019
