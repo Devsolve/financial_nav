@@ -56,7 +56,6 @@ def insert_daily_nav():
     print( nav_detail_df )
 
 
-
 def get_company_id(company_df, comp_nm):
     company_id = company_df.loc[company_df.company_name == comp_nm, 'company_id'].values[0]
     return company_id
