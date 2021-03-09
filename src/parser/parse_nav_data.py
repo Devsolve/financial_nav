@@ -126,7 +126,13 @@ class ParseNavData:
         values = line.rstrip( '\n' ).split( ';' )
         header_index = self.headers.index( header )
         value = values[header_index]
-        return 0.0 if len( value.strip() ) == 0 else value
+        val = 0.0
+        if len( value.strip() ) == 0 or not value.isdigit():
+            val = 0.0
+        else:
+            val = value
+        # return 0.0 if len( value.strip() ) == 0 or not value.isdigit() else value
+        return val
 
 
 # p = ParseNavData()
