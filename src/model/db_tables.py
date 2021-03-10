@@ -26,7 +26,7 @@ class nav_details( Base ):
     __tablename__ = 'nav_details'
     nav_data_id = Column( INTEGER, primary_key=True )
     tr_date = Column( DATE, nullable=False )
-    sch_code = Column( INTEGER )
+    sch_code = Column( String( 50 ) )
     mf_name = Column( String( 200 ) )
     sch_name = Column( String( 250 ) )
     isin_payout = Column( String( 50 ) )
@@ -41,10 +41,10 @@ class nav_details( Base ):
 
 class scheme_detail( Base ):
     __tablename__ = 'scheme_detail'
-    scheme_code_id = Column( INTEGER, primary_key=True )
+    scheme_code = Column(String( 50 ), primary_key=True)
     company_id = Column( INTEGER, nullable=False )
-    scheme_code = Column( String, nullable=False )
-    scheme_name = Column( String, nullable=False,unique=True )
+    scheme_name = Column( String(250), nullable=False,unique=True )
+    isin = Column(String(30))
     scheme_description = Column( String )
     added_on = Column( DATETIME )
     is_active = Column( String, nullable=False )
@@ -70,10 +70,8 @@ class company_info( Base ):
 class daily_nav( Base ):
     __tablename__ = 'daily_nav'
     nav_id = Column( INTEGER, primary_key=True )
-    scheme_code_id = Column( INTEGER)
+    scheme_code = Column( String( 50 ))
     sch_type_id = Column( INTEGER )
-    isin_payout = Column( String( 50 ) )
-    isin_reinv = Column( String( 50 ) )
     nav_value = Column( FLOAT, nullable=False )
     carry_forward = Column( String )
     purchase_amt = Column( FLOAT )

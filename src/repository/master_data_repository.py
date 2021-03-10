@@ -11,18 +11,26 @@ def insert_company_info():
     print( 'insert_company_info' )
     dc = DbConfig()
     con = dc.get_engine()
-    session = dc.get_session()
-    try:
-        sql = f'''select mf_name as company_name from nav_details where sch_code in {tuple( SCHEME_CODES )} '''
-        company_names_df = pd.read_sql_query( sql=sql, con=con, params=None )
-        print( company_names_df.to_dict( orient='records' ) )
-        session.begin()
-        session.bulk_insert_mappings( company_info, company_names_df.to_dict( orient='records' ) )
-        session.commit()
-        print( 'company_info data inserted.' )
-    except Exception:
-        session.rollback()
-        traceback.print_exc()
+    sql = '''select distinct mf_name as company_name from nav_details'''
+    nav_company_names_df = pd.read_sql_query(sql=sql, con=con, params=None)
+    existing_company_sql = '''select distinct company_name from company_info'''
+    existing_company_names_df = pd.read_sql_query(sql=existing_company_sql, con=con, params=None)
+    new_company_names_df = pd.concat([nav_company_names_df,existing_company_names_df])
+    new_company_names_df = new_company_names_df.drop_duplicates(keep=False)
+    new_company_names_df.to_sql('company_info', con=con, if_exists='append', chunksize=1000, index=False)
+
+    # session = dc.get_session()
+    # try:
+    #     sql = f'''select mf_name as company_name from nav_details where sch_code in {tuple( SCHEME_CODES )} '''
+    #     company_names_df = pd.read_sql_query( sql=sql, con=con, params=None )
+    #     print( company_names_df.to_dict( orient='records' ) )
+    #     session.begin()
+    #     session.bulk_insert_mappings( company_info, company_names_df.to_dict( orient='records' ) )
+    #     session.commit()
+    #     print( 'company_info data inserted.' )
+    # except Exception:
+    #     session.rollback()
+    #     traceback.print_exc()
 
     # df.to_sql( 'company_info', con=con, if_exists='append', chunksize=1000 )
 
@@ -71,5 +79,5 @@ def get_sch_type_id(scheme_type_df, sch_typ_nam):
     return sch_type_id
 
 
-insert_daily_nav()
-# insert_company_info()
+# insert_daily_nav()
+insert_company_info()
