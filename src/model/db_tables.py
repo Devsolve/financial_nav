@@ -79,5 +79,6 @@ class daily_nav( Base ):
     added_on = Column( DATETIME )
 
 
+
 # Base.metadata.drop_all( dc.get_engine() )
 # Base.metadata.create_all( dc.get_engine() )
