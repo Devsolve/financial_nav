@@ -57,6 +57,14 @@ class scheme_type(Base):
     sch_type_short_name = Column(String, nullable=False)
     sch_type_name = Column(String, nullable=False)
     sch_type_description = Column(String)
+    added_on = Column(DATETIME)
+
+
+class FundType(Base):
+    __tablename__ = 'fund_type'
+    fund_type_name = Column(String, primary_key=True)
+    description = Column(String)
+    added_on = Column(DATETIME)
 
 
 class company_info(Base):
@@ -78,5 +86,6 @@ class daily_nav(Base):
     sell_amt = Column(FLOAT)
     added_on = Column(DATETIME)
 
-# Base.metadata.drop_all( dc.get_engine() )
-# Base.metadata.create_all( dc.get_engine() )
+
+# Base.metadata.drop_all(dc.get_engine())
+# Base.metadata.create_all(dc.get_engine())

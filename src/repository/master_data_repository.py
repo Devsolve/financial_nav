@@ -1,10 +1,11 @@
 import traceback
 
 import pandas as pd
-
+from datetime import datetime
 from src.config.db_config import DbConfig
 from src.constant.AppConst import *
 from src.model.db_tables import company_info
+from src.utils.AppUtils import *
 
 
 def insert_company_info():
@@ -17,7 +18,14 @@ def insert_company_info():
     existing_company_names_df = pd.read_sql_query(sql=existing_company_sql, con=con, params=None)
     new_company_names_df = pd.concat([nav_company_names_df, existing_company_names_df])
     new_company_names_df = new_company_names_df.drop_duplicates(keep=False)
-    new_company_names_df.to_sql('company_info', con=con, if_exists='append', chunksize=1000, index=False)
+    if not new_company_names_df.empty:
+        no_of_rows = new_company_names_df.shape[0]
+        print('No of new company info to be added: ', no_of_rows)
+        added_on_arr = get_np_array(no_of_rows, datetime.utcnow(), 'object')
+        new_company_names_df['added_on'] = added_on_arr
+        # print(new_company_names_df)
+        new_company_names_df.to_sql('company_info', con=con, if_exists='append', chunksize=1000, index=False)
+        print(f'{no_of_rows}  new company info added...')
 
     # session = dc.get_session()
     # try:
@@ -78,5 +86,6 @@ def get_sch_type_id(scheme_type_df, sch_typ_nam):
     sch_type_id = scheme_type_df.loc[scheme_type_df.sch_type_name == sch_typ_nam, 'sch_type_id'].values[0]
     return sch_type_id
 
+
 # insert_daily_nav()
-# insert_company_info()
+insert_company_info()
