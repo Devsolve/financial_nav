@@ -43,6 +43,19 @@ def insert_company_info():
     # df.to_sql( 'company_info', con=con, if_exists='append', chunksize=1000 )
 
 
+def insert_scheme_type():
+    print('insert_scheme_type')
+    dc = DbConfig()
+    con = dc.get_engine()
+    sql = '''select distinct fund_status_type as sch_type_name, scheme_type as sch_type_short_name from nav_details '''
+    nav_scheme_type_df = pd.read_sql_query(sql=sql, con=con, params=None)
+    existing_scheme_type_sql = '''select distinct sch_type_name,sch_type_short_name from scheme_type '''
+    existing_scheme_type_df = pd.read_sql_query(sql=existing_scheme_type_sql, con=con, params=None)
+    new_scheme_type_df = pd.concat([nav_scheme_type_df, existing_scheme_type_df])
+    new_scheme_type_df = new_scheme_type_df.drop_duplicates(keep=False)
+    new_scheme_type_df.to_sql('scheme_type', con=con, if_exists='append', chunksize=1000, index=False)
+
+
 def insert_daily_nav():
     print('insert_daily_nav')
     dc = DbConfig()
@@ -88,4 +101,5 @@ def get_sch_type_id(scheme_type_df, sch_typ_nam):
 
 
 # insert_daily_nav()
-insert_company_info()
+# insert_company_info()
+insert_scheme_type()
