@@ -88,4 +88,4 @@ def get_sch_type_id(scheme_type_df, sch_typ_nam):
 
 
 # insert_daily_nav()
-# insert_company_info()
+insert_company_info()

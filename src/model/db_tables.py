@@ -86,7 +86,5 @@ class daily_nav(Base):
     sell_amt = Column(FLOAT)
     added_on = Column(DATETIME)
 
-
-
 # Base.metadata.drop_all(dc.get_engine())
 # Base.metadata.create_all(dc.get_engine())
