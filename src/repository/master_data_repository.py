@@ -214,5 +214,4 @@ def get_sch_type_id(scheme_type_df, sch_typ_nam):
 # insert_company_info()
 # insert_scheme_type()
 # insert_fund_type()
-
 insert_scheme_detail()
