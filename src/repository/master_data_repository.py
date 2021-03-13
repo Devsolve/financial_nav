@@ -79,20 +79,23 @@ def insert_fund_type(nav_fund_type_df):
         print(f'{no_of_rows} new fund type added in fund_type')
 
 
-def insert_scheme_detail():
+def insert_scheme_detail(nav_scheme_detail_df, tr_date):
     print('insert scheme detail..')
     dc = DbConfig()
     con = dc.get_engine()
+
     sql = '''select sch_code, mf_name as company_name, sch_name as scheme_name, isin_payout,isin_reinv,nav_value,
-    purchase_amt,sell_amt,fund_status_type as sch_type_name, scheme_type as sch_type_short_name,fund_type as fund_type_name from nav_details '''
-    nav_scheme_detail_df = pd.read_sql_query(sql=sql, con=con, params=None)
+    purchase_amt,sell_amt,fund_status_type as sch_type_name, scheme_type as sch_type_short_name,fund_type as
+    fund_type_name from scheme_detail '''
+    existing_scheme_detail_df = pd.read_sql_query(sql=sql, con=con, params=None)
+
     print('******nav_scheme_detail_df: ', nav_scheme_detail_df.shape)
     __populate_master_data_tables(nav_scheme_detail_df)
 
     company_info_df = pd.read_sql_table(table_name='company_info', con=con, columns=['company_name', 'company_id'])
     scheme_type_df = pd.read_sql_table(table_name='scheme_type', con=con,
                                        columns=['sch_type_id', 'sch_type_short_name', 'sch_type_name'])
-    fund_type_df = pd.read_sql_table(table_name='fund_type', con=con, columns=['fund_type_id', 'fund_type_name'])
+    fund_type_df = pd.read_sql_table(table_name='fund_type', con=con, columns=['fund_type_name', 'fund_type_id'])
 
     scheme_code = []
     scheme_name = []
@@ -101,6 +104,8 @@ def insert_scheme_detail():
     sch_type_id = []
     fund_type_id = []
     is_active = []
+    added_on = []
+    now = datetime.utcnow()
 
     has_value = lambda value: True if value and len(value) > 0 else False
 
@@ -113,20 +118,24 @@ def insert_scheme_detail():
         sch_type_name = getattr(nav_sch_row, 'sch_type_name')
         sch_type_short_name = getattr(nav_sch_row, 'sch_type_short_name')
         fund_type_name = getattr(nav_sch_row, 'fund_type_name')
+        tr_dt = getattr(nav_sch_row, 'tr_date')
+        added_on.append(tr_dt)
 
         comp_id = company_info_df.loc[company_info_df['company_name'] == company_name, 'company_id'].values[0]
         company_id.append(comp_id)
+
         is_active.append('Y')
 
-        fnd_typ_id = fund_type_df.loc[fund_type_df['fund_type_name'] == 'fund_type_name', 'fund_type_id'].values[0]
+        fnd_typ_id = fund_type_df.loc[fund_type_df['fund_type_name'] == fund_type_name, 'fund_type_id'].values[0]
         fund_type_id.append(fnd_typ_id)
 
-        # sch_ty_id = scheme_type_df.loc[scheme_type_df['sch_type_name'] == sch_type_name, scheme_type_df[
-        #     'sch_type_short_name'] == sch_type_short_name, 'sch_type_id']
-        # sch_type_id.append(sch_ty_id)
+        sch_condition = (scheme_type_df['sch_type_name'] == sch_type_name) & (
+                scheme_type_df['sch_type_short_name'] == sch_type_short_name)
+        sch_ty_id = scheme_type_df.loc[sch_condition, 'sch_type_id'].values[0]
+        sch_type_id.append(sch_ty_id)
         # print('sch_ty_id****',sch_ty_id)
 
-        print('fund_type_name: ', fund_type_name, ' fund_type_id: ', fund_type_id)
+        # print('fund_type_name: ', fund_type_name, ' fund_type_id: ', fnd_typ_id)
 
         if has_value(isin_reinv) and has_value(isin_payout):
             scheme_code.append(sch_code + '-P')
@@ -138,6 +147,8 @@ def insert_scheme_detail():
             is_active.append('Y')
             company_id.append(comp_id)
             fund_type_id.append(fnd_typ_id)
+            sch_type_id.append(sch_ty_id)
+            added_on.append(tr_dt)
         else:
             scheme_code.append(sch_code)
             scheme_name.append(sch_name)
@@ -146,11 +157,21 @@ def insert_scheme_detail():
 
     print('isin len: ', len(isin), ' comp_id: ', len(company_id))
     scheme_detail_df = pd.DataFrame({'scheme_code': np.array(scheme_code), 'scheme_name': np.array(scheme_name)
-                                        , 'isin': np.array(isin), 'company_id': np.array(company_id)
-                                        , 'is_active': is_active})
-    print('****scheme_detail_df: ', scheme_detail_df.shape)
+                                        , 'isin': np.array(isin), 'company_id': np.array(company_id),
+                                     'is_active': is_active, 'sch_type_id': np.array(sch_type_id),
+                                     'fund_type_id': np.array(fund_type_id)})
+
     scheme_detail_df = scheme_detail_df.drop_duplicates()
+
+    new_scheme_detail_df = pd.concat([nav_scheme_detail_df, scheme_detail_df])
+
+    print('****scheme_detail_df****: ', scheme_detail_df.shape)
+
+    # scheme_detail_df['added_on'] = np.array(added_on)
+    scheme_detail_df['updated_on'] = get_np_array(scheme_detail_df.shape[0], now, 'object')
+
     print('****scheme_detail_df: ', scheme_detail_df.shape)
+    scheme_detail_df.to_sql('scheme_detail', con=con, if_exists='append', chunksize=1000, index=False)
 
 
 def __populate_master_data_tables(nav_scheme_detail_df):
@@ -166,33 +187,37 @@ def __populate_master_data_tables(nav_scheme_detail_df):
         insert_company_info(nav_company_names_df)
 
 
-def insert_daily_nav():
+def insert_daily_nav(tr_date):
     print('insert_daily_nav')
     dc = DbConfig()
     con = dc.get_engine()
-    company_sql = 'select company_id,company_name from company_info'
-    company_df = pd.read_sql_query(company_sql, con)
-    comp_nm = 'Baroda Mutual Fund'
-    company_id = get_company_id(company_df, comp_nm)
-    print(company_id)
+    # company_sql = 'select company_id,company_name from company_info'
+    # company_df = pd.read_sql_query(company_sql, con)
+    # comp_nm = 'Baroda Mutual Fund'
+    # company_id = get_company_id(company_df, comp_nm)
+    # print(company_id)
+    #
+    # scheme_detail_sql = '''select scheme_code_id,scheme_name from scheme_detail where is_active='Y' '''
+    # scheme_detail_df = pd.read_sql_query(scheme_detail_sql, con)
+    # sch_name = 'ICICI Prudential Long Term Equity Fund (Tax Saving) - Growth Payout'
+    # scheme_code_id = get_scheme_code_id(scheme_detail_df, sch_name)
+    # print(scheme_code_id)
+    #
+    # scheme_type_sql = 'select sch_type_id,sch_type_name from scheme_type'
+    # scheme_type_df = pd.read_sql_query(scheme_type_sql, con)
+    # sch_typ_nam = 'Debt Scheme'
+    # sch_type_id = get_sch_type_id(scheme_type_df, sch_typ_nam)
+    # print(sch_type_id)
 
-    scheme_detail_sql = '''select scheme_code_id,scheme_name from scheme_detail where is_active='Y' '''
-    scheme_detail_df = pd.read_sql_query(scheme_detail_sql, con)
-    sch_name = 'ICICI Prudential Long Term Equity Fund (Tax Saving) - Growth Payout'
-    scheme_code_id = get_scheme_code_id(scheme_detail_df, sch_name)
-    print(scheme_code_id)
-
-    scheme_type_sql = 'select sch_type_id,sch_type_name from scheme_type'
-    scheme_type_df = pd.read_sql_query(scheme_type_sql, con)
-    sch_typ_nam = 'Debt Scheme'
-    sch_type_id = get_sch_type_id(scheme_type_df, sch_typ_nam)
-    print(sch_type_id)
-
-    tr_dt = '01-Apr-2006'
-    nav_detail_sql = '''select sch_name as scheme_name,scheme_type as sch_type_name, isin_payout , isin_reinv , 
-    nav_value ,purchase_amt ,sell_amt , tr_date as added_on from nav_details where tr_date =:tr_date '''
-    nav_detail_df = pd.read_sql_query(sql=nav_detail_sql, con=con, params={'tr_date': tr_dt})
+    tr_date = '01-Apr-2006'
+    sql = '''select sch_code, mf_name as company_name, sch_name as scheme_name, isin_payout,isin_reinv,nav_value,
+    purchase_amt,sell_amt,fund_status_type as sch_type_name, scheme_type as sch_type_short_name,fund_type as
+    fund_type_name  from nav_details  where tr_date =:tr_date'''
+    # nav_detail_sql = '''select sch_name as scheme_name,scheme_type as sch_type_name, isin_payout , isin_reinv ,
+    # nav_value ,purchase_amt ,sell_amt , tr_date as added_on from nav_details where tr_date =:tr_date '''
+    nav_detail_df = pd.read_sql_query(sql=sql, con=con, params={'tr_date': tr_date})
     print(nav_detail_df)
+    insert_scheme_detail(nav_detail_df, tr_date)
 
 
 def get_company_id(company_df, comp_nm):
@@ -214,4 +239,5 @@ def get_sch_type_id(scheme_type_df, sch_typ_nam):
 # insert_company_info()
 # insert_scheme_type()
 # insert_fund_type()
+
 insert_scheme_detail()
