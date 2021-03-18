@@ -14,29 +14,29 @@
 # fund_type           String2(200)
 
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, INTEGER, String, DATE, FLOAT, DATETIME
+from sqlalchemy import Column, INTEGER, String, DATE, FLOAT, DATETIME, BIGINT
 from src.config.db_config import DbConfig
 
 dc = DbConfig()
 
 Base = declarative_base()
 
-
-class nav_details(Base):
-    __tablename__ = 'nav_details'
-    nav_data_id = Column(INTEGER, primary_key=True)
-    tr_date = Column(DATE, nullable=False)
-    sch_code = Column(String(50))
-    mf_name = Column(String(200))
-    sch_name = Column(String(250))
-    isin_payout = Column(String(50))
-    isin_reinv = Column(String(50))
-    nav_value = Column(FLOAT, nullable=False)
-    purchase_amt = Column(FLOAT)
-    sell_amt = Column(FLOAT)
-    fund_status_type = Column(String(200))
-    scheme_type = Column(String(200))
-    fund_type = Column(String(200))
+#
+# class nav_details(Base):
+#     __tablename__ = 'nav_details'
+#     nav_data_id = Column(INTEGER, primary_key=True)
+#     tr_date = Column(DATE, nullable=False)
+#     sch_code = Column(String(50))
+#     mf_name = Column(String(200))
+#     sch_name = Column(String(250))
+#     isin_payout = Column(String(50))
+#     isin_reinv = Column(String(50))
+#     nav_value = Column(FLOAT, nullable=False)
+#     purchase_amt = Column(FLOAT)
+#     sell_amt = Column(FLOAT)
+#     fund_status_type = Column(String(200))
+#     scheme_type = Column(String(200))
+#     fund_type = Column(String(200))
 
 
 class scheme_type(Base):
@@ -67,11 +67,12 @@ class company_info(Base):
 
 class scheme_detail(Base):
     __tablename__ = 'scheme_detail'
-    scheme_code = Column(String(50), primary_key=True)
+    scheme_id = Column(INTEGER, primary_key=True)
+    scheme_code = Column(String(50))
+    scheme_name = Column(String(250), nullable=False, unique=False)
     company_id = Column(INTEGER, nullable=False)
     sch_type_id = Column(INTEGER)
     fund_type_id = Column(INTEGER)
-    scheme_name = Column(String(250), nullable=False, unique=True)
     isin = Column(String(30))
     scheme_description = Column(String)
     added_on = Column(DATETIME)
@@ -81,14 +82,14 @@ class scheme_detail(Base):
 
 class daily_nav(Base):
     __tablename__ = 'daily_nav'
-    nav_id = Column(INTEGER, primary_key=True)
-    scheme_code = Column(String(50))
-    sch_type_id = Column(INTEGER)
+    nav_id = Column(BIGINT, primary_key=True)
+    scheme_id = Column(INTEGER)
     nav_value = Column(FLOAT, nullable=False)
-    carry_forward = Column(String)
     purchase_amt = Column(FLOAT)
     sell_amt = Column(FLOAT)
+    nav_date = Column(DATE, nullable=False)
     added_on = Column(DATETIME)
+    carry_forward = Column(String)
 
 
 # Base.metadata.drop_all(dc.get_engine())
