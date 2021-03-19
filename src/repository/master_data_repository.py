@@ -64,7 +64,6 @@ def insert_company_info(nav_company_names_df):
         print(f'{no_of_rows}  new company info added...')
 
 
-
 def insert_scheme_type(nav_scheme_type_df):
     print('insert_scheme_type')
     dc = DbConfig()
