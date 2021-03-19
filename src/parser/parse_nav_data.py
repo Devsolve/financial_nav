@@ -120,17 +120,20 @@ class ParseNavData:
     def __value_by_header(self, line, header):
         values = line.rstrip( '\n' ).split( ';' )
         header_index = self.headers.index( header )
-        return values[header_index]
+        value = values[header_index].strip() if values[header_index] else ''
+        return value
 
     def __num_value_by_header(self, line, header):
         values = line.rstrip( '\n' ).split( ';' )
         header_index = self.headers.index( header )
         value = values[header_index]
+        # print(f'***header: {header}, val: {value}')
         val = 0.0
-        if len( value.strip() ) == 0 or not value.isdigit():
+        if len( value.strip() ) == 0 :
             val = 0.0
         else:
             val = value
+        print(f'***header: {header}, val1: {value}, val2: {val}, digit: {value.isdigit()}')
         # return 0.0 if len( value.strip() ) == 0 or not value.isdigit() else value
         return val
 

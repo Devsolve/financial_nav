@@ -4,7 +4,6 @@ import pandas as pd
 from datetime import datetime
 from src.config.db_config import DbConfig
 from src.constant.AppConst import *
-from src.model.db_tables import company_info
 from src.utils.AppUtils import *
 
 
@@ -35,7 +34,7 @@ def existing_fund_type():
 def existing_scheme_detail():
     dc = DbConfig()
     con = dc.get_engine()
-    sql = '''select scheme_id, scheme_code, scheme_name from scheme_detail '''
+    sql = '''select scheme_id, scheme_code, scheme_name,isin from scheme_detail where is_active = 'Y' '''
     existing_scheme_detail_df = pd.read_sql_query(sql=sql, con=con, params=None)
     return existing_scheme_detail_df
 
@@ -44,13 +43,9 @@ def insert_company_info(nav_company_names_df):
     print('insert_company_info')
     dc = DbConfig()
     con = dc.get_engine()
-    # sql = '''select distinct mf_name as company_name from nav_details'''
-    # nav_company_names_df = pd.read_sql_query(sql=sql, con=con, params=None)
     nav_company_names_df = nav_company_names_df.drop_duplicates()
-    # print(f'***nav_company_names_df: type: {type(nav_company_names_df)}, shape: {nav_company_names_df.shape}')
     existing_company_names_df = existing_company_info()
     existing_company_names_df = existing_company_names_df[['company_name']]
-    # print(f'**existing_company_names_df: {existing_company_names_df.shape}')
     new_company_names_df = pd.concat([nav_company_names_df, existing_company_names_df])
     new_company_names_df = new_company_names_df.drop_duplicates(keep=False)
     # print(f'**new_company_names_df: {new_company_names_df.shape}')
@@ -69,10 +64,6 @@ def insert_scheme_type(nav_scheme_type_df):
     dc = DbConfig()
     con = dc.get_engine()
     nav_scheme_type_df = nav_scheme_type_df.drop_duplicates()
-    # sql = '''select distinct fund_status_type as sch_type_name, scheme_type as sch_type_short_name from nav_details
-    # '''
-    # nav_scheme_type_df = pd.read_sql_query(sql=sql, con=con, params=None)
-    # print(f'***nav_scheme_type_df: type: {type(nav_scheme_type_df)}, shape: {nav_scheme_type_df.shape}')
     existing_scheme_type_df = existing_scheme_type()
     existing_scheme_type_df = existing_scheme_type_df[['sch_type_name', 'sch_type_short_name']]
     # print(f'**existing_scheme_type_df: {existing_scheme_type_df.shape}')
@@ -140,17 +131,13 @@ def insert_scheme_detail(nav_scheme_detail_df):
     existing_scheme_type_df = existing_scheme_type()
     existing_scheme_detail_df = existing_scheme_detail()
 
-    # sql = '''select scheme_id, scheme_code, scheme_name from scheme_detail '''
-
     has_value = lambda value: True if value and len(value) > 0 else False
 
     rows = []
     if not existing_scheme_detail_df.empty:
         existing_sch_names = existing_scheme_detail_df['scheme_name'].values
-        print('existing_sch_names****', existing_sch_names)
         nav_scheme_detail_df = nav_scheme_detail_df.loc[~nav_scheme_detail_df['scheme_name'].isin(existing_sch_names)]
-
-    print('*****new_nav_scheme_detail_df rows count: ', nav_scheme_detail_df.shape[0])
+        print('new schemes: ', nav_scheme_detail_df)
 
     for nav_sch_row in nav_scheme_detail_df.itertuples(index=False, name='nav_sch_iter'):
         isin_payout = getattr(nav_sch_row, 'isin_payout')
@@ -172,10 +159,10 @@ def insert_scheme_detail(nav_scheme_detail_df):
 
         if has_value(isin_reinv) and has_value(isin_payout) and (
                 ('Payout' not in sch_name) or ('Reinvestment' not in sch_name)):
-            p_sch_name = sch_name + ' Payout'
+            p_sch_name = sch_name + PAYOUT
             p_row = create_scheme_detail_row(sch_code, p_sch_name, isin_payout, comp_id, sch_ty_id, fnd_typ_id, tr_dt)
             rows.append(p_row)
-            r_sch_name = sch_name + ' Reinvestment'
+            r_sch_name = sch_name + REINVEST
             r_row = create_scheme_detail_row(sch_code, r_sch_name, isin_reinv, comp_id, sch_ty_id, fnd_typ_id, tr_dt)
             rows.append(r_row)
         else:
@@ -183,17 +170,14 @@ def insert_scheme_detail(nav_scheme_detail_df):
             row = create_scheme_detail_row(sch_code, sch_name, isin_val, comp_id, sch_ty_id, fnd_typ_id, tr_dt)
             rows.append(row)
 
-    scheme_detail_df = pd.DataFrame(rows)
-
-    scheme_detail_df = scheme_detail_df.drop_duplicates(subset='scheme_name')
-    print('>>>>>>>>>>>>>>new sch names: ', scheme_detail_df['scheme_name'])
-
-    # scheme_detail_df['updated_on'] = get_np_array(scheme_detail_df.shape[0], now, 'object')
-
-    print('****scheme_detail_df: ', scheme_detail_df.shape)
-    dc = DbConfig()
-    con = dc.get_engine()
-    scheme_detail_df.to_sql('scheme_detail', con=con, if_exists='append', chunksize=1000, index=False)
+    if len(rows) > 0:
+        print(f'No of new schemes to be inserted {len(rows)}')
+        scheme_detail_df = pd.DataFrame(rows)
+        scheme_detail_df = scheme_detail_df.drop_duplicates(subset='scheme_name')
+        print('insert scheme detail for scheme_detail_df: ', scheme_detail_df)
+        dc = DbConfig()
+        con = dc.get_engine()
+        scheme_detail_df.to_sql('scheme_detail', con=con, if_exists='append', chunksize=1000, index=False)
 
 
 def create_scheme_detail_row(sch_code, sch_name, isin, company_id, sch_type_id, fund_type_id, tr_date):
@@ -204,7 +188,7 @@ def create_scheme_detail_row(sch_code, sch_name, isin, company_id, sch_type_id, 
     return row
 
 
-def __populate_master_data_tables(nav_scheme_detail_df):
+def populate_master_data_tables(nav_scheme_detail_df):
     # master table names [fund_type, company_info, scheme_type]
     if not nav_scheme_detail_df.empty:
         nav_fund_type_df = nav_scheme_detail_df['fund_type_name']
@@ -218,27 +202,3 @@ def __populate_master_data_tables(nav_scheme_detail_df):
 
         insert_scheme_detail(nav_scheme_detail_df)
 
-
-def insert_daily_nav(tr_date):
-    print('insert_daily_nav')
-    dc = DbConfig()
-    con = dc.get_engine()
-
-    # tr_date = '01-Jan-2019'
-    sql = '''select sch_code as scheme_code, mf_name as company_name, sch_name as scheme_name, isin_payout,isin_reinv,nav_value,
-    purchase_amt,sell_amt,fund_status_type as sch_type_name, scheme_type as sch_type_short_name,fund_type as
-    fund_type_name,tr_date from nav_details  where tr_date =:tr_date'''
-    # nav_detail_sql = '''select sch_name as scheme_name,scheme_type as sch_type_name, isin_payout , isin_reinv ,
-    # nav_value ,purchase_amt ,sell_amt , tr_date as added_on from nav_details where tr_date =:tr_date '''
-    nav_detail_df = pd.read_sql_query(sql=sql, con=con, params={'tr_date': tr_date})
-    print(nav_detail_df)
-    __populate_master_data_tables(nav_detail_df)
-    # insert_scheme_detail(nav_detail_df)
-
-
-# insert_daily_nav()
-# insert_company_info()
-# insert_scheme_type()
-# insert_fund_type()
-
-insert_daily_nav('02-Jan-2019')

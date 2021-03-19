@@ -21,22 +21,22 @@ dc = DbConfig()
 
 Base = declarative_base()
 
-#
-# class nav_details(Base):
-#     __tablename__ = 'nav_details'
-#     nav_data_id = Column(INTEGER, primary_key=True)
-#     tr_date = Column(DATE, nullable=False)
-#     sch_code = Column(String(50))
-#     mf_name = Column(String(200))
-#     sch_name = Column(String(250))
-#     isin_payout = Column(String(50))
-#     isin_reinv = Column(String(50))
-#     nav_value = Column(FLOAT, nullable=False)
-#     purchase_amt = Column(FLOAT)
-#     sell_amt = Column(FLOAT)
-#     fund_status_type = Column(String(200))
-#     scheme_type = Column(String(200))
-#     fund_type = Column(String(200))
+
+class nav_details(Base):
+    __tablename__ = 'nav_details'
+    nav_data_id = Column(INTEGER, primary_key=True)
+    tr_date = Column(DATE, nullable=False)
+    sch_code = Column(String(50))
+    mf_name = Column(String(200))
+    sch_name = Column(String(250))
+    isin_payout = Column(String(50))
+    isin_reinv = Column(String(50))
+    nav_value = Column(FLOAT, nullable=False)
+    purchase_amt = Column(FLOAT)
+    sell_amt = Column(FLOAT)
+    fund_status_type = Column(String(200))
+    scheme_type = Column(String(200))
+    fund_type = Column(String(200))
 
 
 class scheme_type(Base):
@@ -56,11 +56,10 @@ class FundType(Base):
     added_on = Column(DATETIME)
 
 
-
 class company_info(Base):
     __tablename__ = 'company_info'
     company_id = Column(INTEGER, primary_key=True)
-    company_name = Column(String, nullable=False, unique=True)
+    company_name = Column(String, nullable=False, unique=False)
     company_description = Column(String)
     added_on = Column(DATETIME)
 
@@ -82,16 +81,14 @@ class scheme_detail(Base):
 
 class daily_nav(Base):
     __tablename__ = 'daily_nav'
-    nav_id = Column(BIGINT, primary_key=True)
+    nav_id = Column(INTEGER, primary_key=True,autoincrement=True)
     scheme_id = Column(INTEGER)
     nav_value = Column(FLOAT, nullable=False)
     purchase_amt = Column(FLOAT)
     sell_amt = Column(FLOAT)
     nav_date = Column(DATE, nullable=False)
-    added_on = Column(DATETIME)
+    last_nav_date = Column(DATE)
     carry_forward = Column(String)
-
 
 # Base.metadata.drop_all(dc.get_engine())
 # Base.metadata.create_all(dc.get_engine())
-
