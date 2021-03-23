@@ -52,9 +52,9 @@ def insert_daily_nav(tr_date):
 insert_daily_nav('05-Jan-2019')
 
 
-
 def carry_forward_nav():
     pass
+
 
 def close_scheme():
     pass
