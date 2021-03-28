@@ -113,27 +113,30 @@ class ParseNavData:
                                           , 'scheme_type': np.array( scheme_type ), 'fund_type': np.array( fund_type )
                                        } )
 
-        print( nav_detail_df.head( 10 ).to_csv( index=False ) )
+        # print( nav_detail_df.head( 10 ).to_csv( index=False ) )
 
         return nav_detail_df
 
     def __value_by_header(self, line, header):
         values = line.rstrip( '\n' ).split( ';' )
         header_index = self.headers.index( header )
-        return values[header_index]
+        value = values[header_index].strip() if values[header_index] else ''
+        return value
 
     def __num_value_by_header(self, line, header):
         values = line.rstrip( '\n' ).split( ';' )
         header_index = self.headers.index( header )
         value = values[header_index]
         val = 0.0
-        if len( value.strip() ) == 0 or not value.isdigit():
+        try:
+            if value:
+                val = float( value.strip() )
+        except Exception:
             val = 0.0
-        else:
-            val = value
+
+        # print(f'***header: {header}, val1: {value}, val2: {val}, digit: {value.isdigit()}')
         # return 0.0 if len( value.strip() ) == 0 or not value.isdigit() else value
         return val
-
 
 # p = ParseNavData()
 # paramss = {'source': 'api', 'frmdt': '01-Jan-2019', 'todt': '01-Jan-2019'}
