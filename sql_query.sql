@@ -72,6 +72,7 @@ select count(scheme_id) cnt_scheme , nav_date from  daily_nav group by nav_date 
 select scheme_id, nav_date, last_nav_date, carry_forward from daily_nav where carry_forward = 'Y' order by scheme_id;
 
 
+
 ---DELETE QUERY
 delete from company_info;
 delete from fund_type;
