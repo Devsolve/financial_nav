@@ -25,7 +25,6 @@ print( ech_vlu_ar )
 sch_code = int( ech_vlu_ar[0] )
 print( 'sch_code:', sch_code )
 
-
 header = "Scheme Code;Scheme Name;ISIN Div Payout/ISIN Growth;ISIN Div Reinvestment;Net Asset Value;Repurchase " \
          "Price;Sale Price;Date "
 

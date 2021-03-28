@@ -1,6 +1,4 @@
 from datetime import timedelta
-
-
 import numpy as np
 
 

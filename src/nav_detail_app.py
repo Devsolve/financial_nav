@@ -2,7 +2,6 @@ from datetime import datetime
 from flask import Flask, request
 from flask_cors import CORS
 
-
 from src.repository.daily_nav_repository import insert_daily_nav
 from src.repository.nav_data_repository import NavDataRepository
 import json
