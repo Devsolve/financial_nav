@@ -1,6 +1,7 @@
 import datetime
 import traceback
 
+
 from src.config.db_config import DbConfig
 from src.parser.parse_nav_data import ParseNavData
 import pandas as pd

@@ -2,6 +2,7 @@
 # add 2 methods get_engine(), get_session()
 # sqlite database name nav_history_sqlite
 
+
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 import os

@@ -4,6 +4,7 @@ from src.config.db_config import DbConfig
 
 dc = DbConfig()
 
+
 Base = declarative_base()
 
 

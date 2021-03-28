@@ -3,6 +3,7 @@ SOURCE = 'file'
 # AMIINDIA_URL='http://portal.amfiindia.com/DownloadNAVHistoryReport_Po.aspx?'
 AMIINDIA_URL = 'http://portal.amfiindia.com/DownloadNAVHistoryReport_Po.aspx?frmdt={}&todt={}'
 
+
 PAYOUT, REINVEST = ' Payout',' Reinvestment'
 EXPIRY_DAY_LIMIT = 14
 

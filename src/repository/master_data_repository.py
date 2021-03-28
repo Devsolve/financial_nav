@@ -1,5 +1,6 @@
 import traceback
 
+
 import pandas as pd
 from datetime import datetime
 from src.config.db_config import DbConfig

@@ -5,6 +5,7 @@ import requests
 from src.constant.AppConst import *
 
 
+
 class ParseNavData:
 
     def __init__(self):
